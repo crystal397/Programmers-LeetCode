@@ -1,3 +1,7 @@
+# Stack의 개념을 활용하여
+# push의 개념을 append로
+# top 개념을 인덱스의 [-1]로 이용하여 문제를 풀었습니다.
+
 def solution(arr):
     answer = []
     for i in range(len(arr)):
