@@ -1,19 +1,19 @@
+from collections import Counter
+
 class Solution:
     def isValid(self, s: str) -> bool:
-        # confirm the pair
-        counter = Counter(list(s))
+        # confirm the pair first
+        counter = Counter(s)
         if counter['('] != counter[')'] or counter['['] != counter[']'] or counter['{'] != counter['}']:
             return False
 
         stack = []
-        start = ['(', '[', '{']
-        end =[')', ']', '}']
         dict = {')':'(', ']':'[', '}':'{'}
 
         for i in s:
-            if i in start:
+            if dict.get(i) == None:
                 stack.append(i)
-            elif i in end and dict[i] in stack and dict[i] == stack.pop():
+            elif len(stack) != 0 and dict[i] == stack.pop():
                 continue
             else:
                 return False
