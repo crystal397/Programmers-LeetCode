@@ -1,10 +1,10 @@
 from collections import Counter
 
-def solution(participant, completion):    
-    counter_p = Counter(participant)
-    counter_c = Counter(completion)
-    
-    common_diff = counter_p - counter_c
-    
-    for key in common_diff.keys():
-        return key
+def solution(participant, completion):
+    answer = ''
+    p = Counter(participant)
+    c = Counter(completion)
+    i = p - c
+    for a in i.keys():
+        answer = a
+    return answer
