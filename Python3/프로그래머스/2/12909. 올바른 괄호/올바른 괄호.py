@@ -1,20 +1,19 @@
-from collections import deque
-
 def solution(s):
     answer = True
-    q = deque()
     
+    stack = []
     for i in s:
-        if i == "(":
-            q.append(i)
+        if i == '(':
+            stack.append(i)
         else:
-            if (len(q) == 0) or ("(" not in q):
-                return False
+            if len(stack) != 0: 
+                stack.pop()
             else:
-                q.popleft()
-                
-    if len(q) != 0:
+                return False
+    
+    if len(stack) != 0: 
         return False
+    
     # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
     print('Hello Python')
 
