@@ -1,26 +1,27 @@
 from collections import deque
 
+def bfs(s, computers, visited):
+    q = deque()
+    
+    q.append(s)
+    visited[s] = True
+    
+    while q:
+        c = q.popleft()
+        for n, cn in enumerate(computers[c]):
+            if visited[n] == False and cn == 1:
+                q.append(n)
+                visited[n] = True
+    
+    return visited
+
 def solution(n, computers):
     answer = 0
     visited = [False] * n
     
-    for start_v in range(n):
-        if visited[start_v] == False:
-            bfs(computers, start_v, visited)
+    for i in range(n):
+        if not visited[i]:
+            bfs(i, computers, visited)
             answer += 1
-                
+    
     return answer
-
-def bfs(computers, start_v, visited):
-    q = deque()
-    
-    q.append(start_v)
-    visited[start_v] = True
-    
-    while q:
-        cur_v = q.popleft()
-        for next_v, num in enumerate(computers[cur_v]):
-            if visited[next_v] == False and num == 1:
-                q.append(next_v)
-                visited[next_v] = True
-    return visited
