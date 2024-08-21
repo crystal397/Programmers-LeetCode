@@ -1,15 +1,15 @@
 def solution(prices):
     answer = [0] * len(prices)
-    stack = []
+    s = []
     
-    for idx, price in enumerate(prices):
-        while stack and price < prices[stack[-1]]:
-            pop_idx = stack.pop()
-            answer[pop_idx] = idx - pop_idx
-        stack.append(idx)
-    
-    while len(stack) != 0:
-        pop_idx = stack.pop()
-        answer[pop_idx] = len(prices) - 1 - pop_idx
+    for i, price in enumerate(prices):
+        while s and prices[s[-1]] > price:
+            idx = s.pop()
+            answer[idx] = i - idx
+        s.append(i)
+        
+    while s:
+        idx = s.pop()
+        answer[idx] = len(prices) - 1 -idx
     
     return answer
