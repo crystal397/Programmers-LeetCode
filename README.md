@@ -25,5 +25,6 @@ LeetCode에서 제공하는 Python 문제 풀이입니다.
 |  |
 | ------- |
 | [0620-not-boring-movies](https://github.com/crystal397/Programmers-LeetCode/tree/master/0620-not-boring-movies) |
+| [1161-project-employees-i](https://github.com/crystal397/Programmers-LeetCode/tree/master/1161-project-employees-i) |
 | [1390-average-selling-price](https://github.com/crystal397/Programmers-LeetCode/tree/master/1390-average-selling-price) |
 <!---LeetCode Topics End-->
