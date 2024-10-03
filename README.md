@@ -28,4 +28,5 @@ LeetCode에서 제공하는 Python 문제 풀이입니다.
 | [1161-project-employees-i](https://github.com/crystal397/Programmers-LeetCode/tree/master/1161-project-employees-i) |
 | [1317-monthly-transactions-i](https://github.com/crystal397/Programmers-LeetCode/tree/master/1317-monthly-transactions-i) |
 | [1390-average-selling-price](https://github.com/crystal397/Programmers-LeetCode/tree/master/1390-average-selling-price) |
+| [2495-number-of-unique-subjects-taught-by-each-teacher](https://github.com/crystal397/Programmers-LeetCode/tree/master/2495-number-of-unique-subjects-taught-by-each-teacher) |
 <!---LeetCode Topics End-->
